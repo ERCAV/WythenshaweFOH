@@ -11,23 +11,14 @@
             display: flex; 
             justify-content: center; 
             align-items: center; 
-            height: 100vh; /* Full screen */
-            background-color: #000; /* Optional: black background */
+            height: 100vh; /* Full screen height */
+            width: 100vw; /* Full screen width */
         }
 
-        .iframe-container {
-            width: 100vw; /* Full viewport width */
-            height: 100vh; /* Full viewport height */
-            overflow: hidden; 
-            position: relative;
-        }
-
-        #myIframe {
-            width: 100%;
-            height: 100%;
+        iframe {
+            width: 100vw; /* Make iframe take full screen width */
+            height: 100vh; /* Make iframe take full screen height */
             border: none;
-            transform: scale(1.3);  /* Adjust zoom (1.3 = 130% zoom) */
-            transform-origin: top left; /* Keeps it in place */
         }
     </style>
     <script>
@@ -39,14 +30,13 @@
     </script>
 </head>
 <body>
-    <div class="iframe-container">
-        <iframe id="myIframe" 
-            src="https://www.dropbox.com/scl/fi/5xjghraip9muns1g05w1v/forpowerautomate.pdf?rlkey=pvgkalvpqpr4fgdw1xiqgjkyd&raw=1" 
-            title="FRONT OF HOUSE DISPLAY">
-        </iframe>
-    </div>
+    <iframe id="myIframe" 
+        src="https://www.dropbox.com/scl/fi/5xjghraip9muns1g05w1v/forpowerautomate.pdf?rlkey=pvgkalvpqpr4fgdw1xiqgjkyd&raw=1" 
+        title="FRONT OF HOUSE DISPLAY">
+    </iframe>
 </body>
 </html>
 
 
-is this working now 13
+
+is this working now 14
