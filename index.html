@@ -11,15 +11,15 @@
     <script>
         function refreshIframe() {
             let iframe = document.getElementById('myIframe');
-            iframe.src = "https://www.dropbox.com/s/yourfileid/latest.pdf?dl=1" + "&t=" + new Date().getTime();
+            iframe.src = "https://www.dropbox.com/scl/fi/5xjghraip9muns1g05w1v/forpowerautomate.pdf?rlkey=pvgkalvpqpr4fgdw1xiqgjkyd&raw=1&t=" + new Date().getTime();
         }
-        setInterval(refreshIframe, 1 * 60 * 1000); // Refresh every 1 minutes
+        setInterval(refreshIframe, 1 * 60 * 1000); // Refresh every 15 minutes
     </script>
 </head>
 <body>
     <h1>Front of House Display</h1>
     <iframe id="myIframe" 
-        src="https://www.dropbox.com/s/yourfileid/latest.pdf?dl=1" 
+        src="https://www.dropbox.com/scl/fi/5xjghraip9muns1g05w1v/forpowerautomate.pdf?rlkey=pvgkalvpqpr4fgdw1xiqgjkyd&raw=1" 
         width="1920" 
         height="1080" 
         frameborder="0" 
@@ -30,5 +30,6 @@
 </body>
 </html>
 
-is this working now 8
+
+is this working now 9
 //https://cmft-my.sharepoint.com/personal/rhamblin_uhsm_nhs_uk/_layouts/15/embed.aspx?UniqueId=651fa488-39ca-44e8-b6b2-3bc485e26aaa
