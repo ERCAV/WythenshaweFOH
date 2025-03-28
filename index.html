@@ -11,7 +11,7 @@
     <script>
         function refreshIframe() {
             let iframe = document.getElementById('myIframe');
-            iframe.src = "https://drive.google.com/file/d/14sZEo26Tsm83VqnuISOdVmPfHkWMzl9b/view?usp=sharing" + "&t=" + new Date().getTime();
+            iframe.src = "https://drive.google.com/file/d/14sZEo26Tsm83VqnuISOdVmPfHkWMzl9b/preview" + "&t=" + new Date().getTime();
         }
         setInterval(refreshIframe, 2 * 60 * 1000); // Refresh every 15 minutes
     </script>
@@ -19,7 +19,7 @@
 <body>
     <h1> </h1>
     <iframe id="myIframe" 
-        src="https://drive.google.com/file/d/14sZEo26Tsm83VqnuISOdVmPfHkWMzl9b/view?usp=sharing" 
+        src="https://drive.google.com/file/d/14sZEo26Tsm83VqnuISOdVmPfHkWMzl9b/preview" 
         width="1920" 
         height="1080" 
         frameborder="0" 
