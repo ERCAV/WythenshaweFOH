@@ -11,15 +11,15 @@
     <script>
         function refreshIframe() {
             let iframe = document.getElementById('myIframe');
-            iframe.src = "https://www.dropbox.com/scl/fi/sjqvtd3u91a0wyi50up4r/FRONT-OF-HOUSE-DISPLAY.pdf?raw=1&t=" + "&t=" + new Date().getTime();
+            iframe.src = "https://www.dropbox.com/scl/fi/sjqvtd3u91a0wyi50up4r/FRONT-OF-HOUSE-DISPLAY.pdf?raw=1" + "&t=" + new Date().getTime();
         }
-        setInterval(refreshIframe, 15 * 60 * 1000); // Refresh every 15 minutes
+        setInterval(refreshIframe, 1 * 60 * 1000); // Refresh every 15 minutes
     </script>
 </head>
 <body>
     <h1>FRONT OF HOUSE DISPLAY</h1>
     <iframe id="myIframe" 
-        src="https://www.dropbox.com/scl/fi/sjqvtd3u91a0wyi50up4r/FRONT-OF-HOUSE-DISPLAY.pdf?raw=1&t=" 
+        src="https://www.dropbox.com/scl/fi/sjqvtd3u91a0wyi50up4r/FRONT-OF-HOUSE-DISPLAY.pdf?raw=1" 
         width="1920" 
         height="1080" 
         frameborder="0" 
