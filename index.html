@@ -3,35 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PDF Display</title>
+    <title> </title>
     <style>
-        body { 
-            margin: 0; 
-            overflow: hidden; 
-            display: flex; 
-            justify-content: center; 
-            align-items: center; 
-            height: 100vh; /* Keeps it centered */
-            width: 100vw;
-        }
-
-        iframe {
-            width: 100vh;  /* Set your custom width */
-            height: 100vh; /* Set your custom height */
-            border: none;
-        }
+        body { text-align: center; font-family: Arial, sans-serif; }
+        iframe { width: 1920px; height: 1080px; border: none; }
     </style>
     <script>
         function refreshIframe() {
             let iframe = document.getElementById('myIframe');
-            iframe.src = "https://www.dropbox.com/scl/fi/5xjghraip9muns1g05w1v/forpowerautomate.pdf?rlkey=pvgkalvpqpr4fgdw1xiqgjkyd&raw=1&t=" + new Date().getTime();
+            iframe.src = "https://cmft-my.sharepoint.com/personal/rhamblin_uhsm_nhs_uk/_layouts/15/embed.aspx?UniqueId=651fa488-39ca-44e8-b6b2-3bc485e26aaa" + "&t=" + new Date().getTime();
         }
-        setInterval(refreshIframe, 15 * 60 * 1000); // Refresh every 15 minutes
+        setInterval(refreshIframe, 2 * 60 * 1000); // Refresh every 15 minutes
     </script>
 </head>
 <body>
+    <h1> </h1>
     <iframe id="myIframe" 
-        src="https://www.dropbox.com/scl/fi/5xjghraip9muns1g05w1v/forpowerautomate.pdf?rlkey=pvgkalvpqpr4fgdw1xiqgjkyd&raw=1" 
+        src="https://cmft-my.sharepoint.com/personal/rhamblin_uhsm_nhs_uk/_layouts/15/embed.aspx?UniqueId=651fa488-39ca-44e8-b6b2-3bc485e26aaa" 
+        width="1920" 
+        height="1080" 
+        frameborder="0" 
+        scrolling="yes" 
+        allowfullscreen 
         title="FRONT OF HOUSE DISPLAY">
     </iframe>
 </body>
