@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> </title>
+    <title>PDF Display</title>
     <style>
         body { text-align: center; font-family: Arial, sans-serif; }
         iframe { width: 1920px; height: 1080px; border: none; }
@@ -11,15 +11,15 @@
     <script>
         function refreshIframe() {
             let iframe = document.getElementById('myIframe');
-            iframe.src = "https://docs.google.com/gview?url=https://drive.google.com/uc?export=download&id=14sZEo26Tsm83VqnuISOdVmPfHkWMzl9b&embedded=true" + "&t=" + new Date().getTime();
+            iframe.src = "https://www.dropbox.com/s/yourfileid/latest.pdf?dl=1" + "&t=" + new Date().getTime();
         }
-        setInterval(refreshIframe, 2 * 60 * 1000); // Refresh every 15 minutes
+        setInterval(refreshIframe, 1 * 60 * 1000); // Refresh every 1 minutes
     </script>
 </head>
 <body>
-    <h1> </h1>
+    <h1>Front of House Display</h1>
     <iframe id="myIframe" 
-        src="https://docs.google.com/gview?url=https://drive.google.com/uc?export=download&id=14sZEo26Tsm83VqnuISOdVmPfHkWMzl9b&embedded=true" 
+        src="https://www.dropbox.com/s/yourfileid/latest.pdf?dl=1" 
         width="1920" 
         height="1080" 
         frameborder="0" 
@@ -29,5 +29,6 @@
     </iframe>
 </body>
 </html>
-is this working now 7
+
+is this working now 8
 //https://cmft-my.sharepoint.com/personal/rhamblin_uhsm_nhs_uk/_layouts/15/embed.aspx?UniqueId=651fa488-39ca-44e8-b6b2-3bc485e26aaa
