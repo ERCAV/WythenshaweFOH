@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF Viewe r</title>
+    <style>
+        body { text-align: center; font-family: Arial, sans-serif; }
+        
+        /* Container for zoom effect */
+        .iframe-container {
+            display: inline-block;
+            transform: scale(1.5);  /* Change this value to zoom in/out */
+            transform-origin: center;
+            margin-top: 100px; /*Adds space above the iframe hopefully */
+        }
+
+        /* Adjust iframe size */
+        iframe {
+            width: 2016px;  /* Change this to adjust visible area */
+            height: 1224px;  /* Change this if content is cut off */
+            border: none;
+        }
+    </style>
+    <script>
+        function refreshIframe() {
+            let iframe = document.getElementById('myIframe');
+            iframe.src = "https://1drv.ms/b/s!Apk0IWf-oYKVcvhkhKWowh4pZtE?embed=1&em=2" + "&t=" + new Date().getTime();
+        }
+        setInterval(refreshIframe, 15 * 60 * 1000); // Refresh every 1 minute
+    </script>
+</head>
+<body>
+    <h1> Refreshing booking data, please hold :) </h1>
+
+    <div class="iframe-container">
+        <iframe id="myIframe" 
+            src="https://1drv.ms/b/s!Apk0IWf-oYKVcvhkhKWowh4pZtE?embed=1&em=2" 
+            width="2016" 
+            height="1224" 
+            frameborder="0" 
+            scrolling="yes" 
+            allowfullscreen 
+            title="Front of House">
+        </iframe>
+    </div>
+
+</body>
+</html>
