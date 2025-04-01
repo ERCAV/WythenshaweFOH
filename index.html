@@ -7,26 +7,26 @@
     <style>
         body { text-align: center; font-family: Arial, sans-serif; }
 
-        /* Adjust iframe size for better clarity */
         iframe {
-            width: 2400px;  /* Increase width for higher resolution */
-            height: 1350px; /* Increase height to match width */
+            width: 2400px;
+            height: 1350px;
             border: none;
         }
     </style>
     <script>
         function refreshIframe() {
-            let iframe = document.getElementById('myIframe');
-            iframe.src = "https://1drv.ms/b/s!Apk0IWf-oYKVcvhkhKWowh4pZtE?embed=1&em=2" + "&t=" + new Date().getTime();
+            let iframe = document.getElementById('pdfViewer');
+            let pdfURL = "https://mozilla.github.io/pdf.js/web/viewer.html?file=https://1drv.ms/b/s!Apk0IWf-oYKVdOjjB-2s9kcqU40?e=tmgUuj";
+            iframe.src = pdfURL + "&t=" + new Date().getTime();  // Prevent caching
         }
-        setInterval(refreshIframe, 1 * 60 * 1000); // Refresh every 1 minute
+        setInterval(refreshIframe, 15 * 60 * 1000); // Refresh every 15 minutes
     </script>
 </head>
 <body>
     <h1>PDF Viewer</h1>
 
-    <iframe id="myIframe" 
-        src="https://1drv.ms/b/s!Apk0IWf-oYKVcvhkhKWowh4pZtE?embed=1&em=2" 
+    <iframe id="pdfViewer" 
+        src="https://mozilla.github.io/pdf.js/web/viewer.html?file=https://1drv.ms/b/s!Apk0IWf-oYKVdOjjB-2s9kcqU40?e=tmgUuj&t=" + new Date().getTime()
         width="2400" 
         height="1350" 
         frameborder="0" 
