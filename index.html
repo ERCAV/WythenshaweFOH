@@ -3,40 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Front of House Screen</title>
+    <title>PDF Viewer</title>
     <style>
         body { text-align: center; font-family: Arial, sans-serif; }
-        .iframe-container {
-            display: inline-block;
-            transform: scale(1.3); /* Adjust zoom level */
-            transform-origin: center;
-        }
+
+        /* Adjust iframe size for better clarity */
         iframe {
-            width: 1920px;  /* Adjusted width to prevent overflow */
-            height: 1080px;  /* Adjusted height */
+            width: 2400px;  /* Increase width for higher resolution */
+            height: 1350px; /* Increase height to match width */
             border: none;
         }
     </style>
     <script>
         function refreshIframe() {
             let iframe = document.getElementById('myIframe');
-            iframe.src = "https://1drv.ms/b/s!Apk0IWf-oYKVcvhkhKWowh4pZtE?embed=1&em=2&wdEmbed=OFF" + "&t=" + new Date().getTime();
+            iframe.src = "https://1drv.ms/b/s!Apk0IWf-oYKVcvhkhKWowh4pZtE?embed=1&em=2" + "&t=" + new Date().getTime();
         }
         setInterval(refreshIframe, 1 * 60 * 1000); // Refresh every 1 minute
     </script>
 </head>
 <body>
-    <h1> </h1>
-    <div class="iframe-container">
-        <iframe id="myIframe" 
-            src="https://1drv.ms/b/s!Apk0IWf-oYKVcvhkhKWowh4pZtE?embed=1&em=2&wdEmbed=OFF" 
-            width="1920" 
-            height="1080" 
-            frameborder="0" 
-            scrolling="yes" 
-            allowfullscreen 
-            title="Front of House">
-        </iframe>
-    </div>
+    <h1>PDF Viewer</h1>
+
+    <iframe id="myIframe" 
+        src="https://1drv.ms/b/s!Apk0IWf-oYKVcvhkhKWowh4pZtE?embed=1&em=2" 
+        width="2400" 
+        height="1350" 
+        frameborder="0" 
+        scrolling="yes" 
+        allowfullscreen 
+        title="Front of House">
+    </iframe>
+
 </body>
 </html>
