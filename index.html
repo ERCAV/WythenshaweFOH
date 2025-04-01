@@ -5,39 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PDF Viewer</title>
     <style>
-        /* Make the entire page take up full screen */
-        html, body {
-            margin: 0;
-            padding: 0;
-            height: 100%;
-            overflow: hidden; /* Prevents scrolling */
-            text-align: center;
-            font-family: Arial, sans-serif;
+        body { text-align: center; font-family: Arial, sans-serif; }
+        
+        /* Container for zoom effect */
+        .iframe-container {
+            display: inline-block;
+            transform: scale(1.5);  /* Change this value to zoom in/out */
+            transform-origin: top left;
         }
 
-        /* Make iframe fill the entire browser window */
+        /* Adjust iframe size */
         iframe {
-            width: 100vw;  /* Full width of the viewport */
-            height: 100vh; /* Full height of the viewport */
-            border: none;  /* Removes border */
+            width: 1280px;  /* Change this to adjust visible area */
+            height: 720px;  /* Change this if content is cut off */
+            border: none;
         }
     </style>
     <script>
-        // Function to refresh the iframe every 1 minute (updates the PDF)
         function refreshIframe() {
             let iframe = document.getElementById('myIframe');
             iframe.src = "https://1drv.ms/b/s!Apk0IWf-oYKVdBchoDYA7H3jj08?embed=1&em=2" + "&t=" + new Date().getTime();
         }
-
-        // Auto-refresh the iframe every 60 seconds
-        setInterval(refreshIframe, 60 * 1000); 
+        setInterval(refreshIframe, 1 * 60 * 1000); // Refresh every 1 minute
     </script>
 </head>
 <body>
-    <iframe id="myIframe" 
-        src="https://1drv.ms/b/s!Apk0IWf-oYKVdBchoDYA7H3jj08?embed=1&em=2" 
-        allowfullscreen
-        title="Front of House">
-    </iframe>
+    <h1>PDF Viewer</h1>
+
+    <div class="iframe-container">
+        <iframe id="myIframe" 
+            src="https://1drv.ms/b/s!Apk0IWf-oYKVdBchoDYA7H3jj08?embed=1&em=2" 
+            width="1280" 
+            height="720" 
+            frameborder="0" 
+            scrolling="yes" 
+            allowfullscreen 
+            title="Front of House">
+        </iframe>
+    </div>
+
 </body>
 </html>
