@@ -5,44 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PDF Viewer</title>
     <style>
-        body { text-align: center; font-family: Arial, sans-serif; }
-        
-        /* Container for zoom effect */
-        .iframe-container {
-            display: inline-block;
-            transform: scale(1.5);  /* Change this value to zoom in/out */
-            transform-origin: top left;
+        /* Make the entire page take up full screen */
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden; /* Prevents scrolling */
+            text-align: center;
+            font-family: Arial, sans-serif;
         }
 
-        /* Adjust iframe size */
+        /* Make iframe fill the entire browser window */
         iframe {
-            width: 1280px;  /* Change this to adjust visible area */
-            height: 720px;  /* Change this if content is cut off */
-            border: none;
+            width: 100vw;  /* Full width of the viewport */
+            height: 100vh; /* Full height of the viewport */
+            border: none;  /* Removes border */
         }
     </style>
     <script>
+        // Function to refresh the iframe every 1 minute (updates the PDF)
         function refreshIframe() {
             let iframe = document.getElementById('myIframe');
             iframe.src = "https://1drv.ms/b/s!Apk0IWf-oYKVcvhkhKWowh4pZtE?embed=1&em=2" + "&t=" + new Date().getTime();
         }
-        setInterval(refreshIframe, 1 * 60 * 1000); // Refresh every 1 minute
+
+        // Auto-refresh the iframe every 60 seconds
+        setInterval(refreshIframe, 60 * 1000); 
     </script>
 </head>
 <body>
-    <h1>PDF Viewer</h1>
-
-    <div class="iframe-container">
-        <iframe id="myIframe" 
-            src="https://1drv.ms/b/s!Apk0IWf-oYKVcvhkhKWowh4pZtE?embed=1&em=2" 
-            width="1280" 
-            height="720" 
-            frameborder="0" 
-            scrolling="yes" 
-            allowfullscreen 
-            title="Front of House">
-        </iframe>
-    </div>
-
+    <iframe id="myIframe" 
+        src="https://1drv.ms/b/s!Apk0IWf-oYKVcvhkhKWowh4pZtE?embed=1&em=2" 
+        allowfullscreen
+        title="Front of House">
+    </iframe>
 </body>
 </html>
