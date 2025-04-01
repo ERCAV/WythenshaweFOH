@@ -3,41 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PDF Viewer back to css</title>
+    <title>PDF Viewer</title>
     <style>
         body { text-align: center; font-family: Arial, sans-serif; }
         
-        .pdf-container {
+        /* Container for zoom effect */
+        .iframe-container {
             display: inline-block;
-            transform: scale(1.5); /* Change this value to adjust zoom */
+            transform: scale(1.5);  /* Change this value to zoom in/out */
             transform-origin: top left;
         }
 
+        /* Adjust iframe size */
         iframe {
-            width: 1920px;
-            height: 1080px;
+            width: 1280px;  /* Change this to adjust visible area */
+            height: 720px;  /* Change this if content is cut off */
             border: none;
         }
     </style>
     <script>
         function refreshIframe() {
             let iframe = document.getElementById('myIframe');
-            iframe.src = "https://1drv.ms/b/s!Apk0IWf-oYKVdOjjB-2s9kcqU40?embed=1&t=" + new Date().getTime();
+            iframe.src = "https://1drv.ms/b/s!Apk0IWf-oYKVcvhkhKWowh4pZtE?embed=1&em=2" + "&t=" + new Date().getTime();
         }
-        setInterval(refreshIframe, 1 * 60 * 1000); // Refresh every 1 minutes
+        setInterval(refreshIframe, 1 * 60 * 1000); // Refresh every 1 minute
     </script>
 </head>
 <body>
     <h1>PDF Viewer</h1>
 
-    <div class="pdf-container">
+    <div class="iframe-container">
         <iframe id="myIframe" 
-            src="https://1drv.ms/b/s!Apk0IWf-oYKVdOjjB-2s9kcqU40?embed=1" 
-            width="1920" 
-            height="1080" 
+            src="https://1drv.ms/b/s!Apk0IWf-oYKVcvhkhKWowh4pZtE?embed=1&em=2" 
+            width="1280" 
+            height="720" 
             frameborder="0" 
             scrolling="yes" 
-            allowfullscreen
+            allowfullscreen 
             title="Front of House">
         </iframe>
     </div>
