@@ -3,34 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PDF Viewer css way</title>
+    <title>PDF Viewer</title>
     <style>
         body { text-align: center; font-family: Arial, sans-serif; }
 
-        /* Adjust iframe size for better clarity */
         iframe {
-            width: 2400px;  /* Increase width for higher resolution */
-            height: 1350px; /* Increase height to match width */
+            width: 1920px;
+            height: 1080px;
             border: none;
         }
     </style>
     <script>
         function refreshIframe() {
             let iframe = document.getElementById('myIframe');
-            iframe.src = "https://1drv.ms/b/s!Apk0IWf-oYKVcvhkhKWowh4pZtE?embed=1&em=2" + "&t=" + new Date().getTime();
+            iframe.src = "https://1drv.ms/b/s!Apk0IWf-oYKVdOjjB-2s9kcqU40?embed=1&wdZoom=200&t=" + new Date().getTime();
         }
-        setInterval(refreshIframe, 1 * 60 * 1000); // Refresh every 1 minute
+        setInterval(refreshIframe, 15 * 60 * 1000); // Refresh every 15 minutes
     </script>
 </head>
 <body>
     <h1>PDF Viewer</h1>
 
     <iframe id="myIframe" 
-        src="https://1drv.ms/b/s!Apk0IWf-oYKVcvhkhKWowh4pZtE?embed=1&em=2" 
-        width="2400" 
-        height="1350" 
+        src="https://1drv.ms/b/s!Apk0IWf-oYKVdOjjB-2s9kcqU40?embed=1&wdZoom=200" 
+        width="1920" 
+        height="1080" 
         frameborder="0" 
-        scrolling="no" 
+        scrolling="yes" 
         allowfullscreen 
         title="Front of House">
     </iframe>
