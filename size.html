@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF Viewer Size Test</title>
+    <style>
+        body { text-align: center; font-family: Arial, sans-serif; }
+        
+        /* Container for zoom effect */
+        .iframe-container {
+            display: inline-block;
+            transform: scale(1);  /* Change this value to zoom in/out */
+            transform-origin: center;
+             margin-top: -100px; /* Adds or removes space above the iframe */
+        }
+
+        /* Adjust iframe size */
+        iframe {
+            width: 1920px;  /* Change this to adjust visible area */
+            height: 1080px;  /* Change this if content is cut off */
+            border: none;
+        }
+    </style>
+    <script>
+        function refreshIframe() {
+            let iframe = document.getElementById('myIframe');
+            iframe.src = "https://1drv.ms/b/s!Apk0IWf-oYKVeZ6GcRIpqcsWZZc?embed=1&em=2" + "&t=" + new Date().getTime();
+        }
+        setInterval(refreshIframe, 1 * 60 * 1000); // Refresh every 1 minute
+    </script>
+</head>
+<body>
+    <h1> Room Booking Data </h1>
+
+    <div class="iframe-container">
+        <iframe id="myIframe" 
+            src="https://1drv.ms/b/s!Apk0IWf-oYKVeZ6GcRIpqcsWZZc?embed=1&em=2" 
+            width="1920" 
+            height="1080" 
+            frameborder="0" 
+            scrolling="no" 
+            allowfullscreen 
+            title="Front of House">
+        </iframe>
+    </div>
+
+</body>
+</html>
